@@ -1,0 +1,488 @@
+/*==========================================
+            GOOGLE FONT
+==========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/*==========================================
+                RESET
+==========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#4B2E83,#1B2A6B,#0B1F3A);
+
+    overflow:hidden;
+
+}
+
+/*==========================================
+        BACKGROUND CIRCLES
+==========================================*/
+
+.circle{
+
+    position:fixed;
+
+    border-radius:50%;
+
+    filter:blur(25px);
+
+    opacity:.35;
+
+}
+
+.circle1{
+
+    width:260px;
+
+    height:260px;
+
+    background:#FFD56B;
+
+    top:-80px;
+
+    left:-80px;
+
+}
+
+.circle2{
+
+    width:320px;
+
+    height:320px;
+
+    background:#8B5CF6;
+
+    bottom:-120px;
+
+    right:-100px;
+
+}
+
+.circle3{
+
+    width:180px;
+
+    height:180px;
+
+    background:white;
+
+    top:18%;
+
+    right:12%;
+
+}
+
+/*==========================================
+            CALCULATOR
+==========================================*/
+
+.calculator{
+
+    width:380px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+
+    z-index:2;
+
+}
+
+/*==========================================
+                LOGO
+==========================================*/
+
+.logo{
+
+    width:80px;
+
+    height:80px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#FFD56B,#D4AF37);
+
+    color:#4B2E83;
+
+    font-size:34px;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+
+}
+
+.logo i{
+
+    animation:float 2s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================
+                TITLE
+==========================================*/
+
+h1{
+
+    text-align:center;
+
+    color:white;
+
+    margin-top:18px;
+
+    font-size:34px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#eeeeee;
+
+    margin:10px 0 30px;
+
+}
+
+/*==========================================
+                DISPLAY
+==========================================*/
+
+.display{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    margin-bottom:25px;
+
+    text-align:right;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+
+}
+
+#expression{
+
+    color:#777;
+
+    font-size:20px;
+
+    min-height:28px;
+
+    word-wrap:break-word;
+
+}
+
+#result{
+
+    color:#0B1F3A;
+
+    font-size:36px;
+
+    font-weight:700;
+
+    margin-top:8px;
+
+    word-wrap:break-word;
+
+}
+
+/*==========================================
+            BUTTON GRID
+==========================================*/
+
+.buttons{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+
+}
+
+/*==========================================
+            BUTTON STYLE
+==========================================*/
+
+.btn{
+
+    height:65px;
+
+    border:none;
+
+    border-radius:15px;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/*==========================================
+            NUMBER BUTTONS
+==========================================*/
+
+.number{
+
+    background:white;
+
+    color:#0B1F3A;
+
+}
+
+.number:hover{
+
+    background:#F3F3F3;
+
+    transform:translateY(-4px);
+
+}
+
+/*==========================================
+            OPERATOR BUTTONS
+==========================================*/
+
+.operator{
+
+    background:#7F5AF0;
+
+    color:white;
+
+}
+
+.operator:hover{
+
+    background:#6941E8;
+
+    transform:translateY(-4px);
+
+}
+
+/*==========================================
+            CLEAR BUTTON
+==========================================*/
+
+.clear{
+
+    background:#EF4444;
+
+    color:white;
+
+}
+
+.clear:hover{
+
+    background:#DC2626;
+
+    transform:translateY(-4px);
+
+}
+
+/*==========================================
+            DELETE BUTTON
+==========================================*/
+
+.delete{
+
+    background:#F59E0B;
+
+    color:white;
+
+}
+
+.delete:hover{
+
+    background:#D97706;
+
+    transform:translateY(-4px);
+
+}
+
+/*==========================================
+            EQUAL BUTTON
+==========================================*/
+
+.equal{
+
+    background:linear-gradient(135deg,#10B981,#059669);
+
+    color:white;
+
+}
+
+.equal:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 20px rgba(16,185,129,.35);
+
+}
+
+/*==========================================
+            ZERO BUTTON
+==========================================*/
+
+.zero{
+
+    grid-column:span 2;
+
+}
+
+/*==========================================
+            BUTTON ICON
+==========================================*/
+
+.btn i{
+
+    font-size:18px;
+
+}
+
+/*==========================================
+            RESPONSIVE
+==========================================*/
+
+@media(max-width:480px){
+
+    body{
+
+        padding:20px;
+
+        overflow:auto;
+
+    }
+
+    .calculator{
+
+        width:100%;
+
+        padding:22px;
+
+    }
+
+    .logo{
+
+        width:65px;
+
+        height:65px;
+
+        font-size:28px;
+
+    }
+
+    h1{
+
+        font-size:28px;
+
+    }
+
+    .subtitle{
+
+        font-size:14px;
+
+    }
+
+    .display{
+
+        padding:16px;
+
+    }
+
+    #expression{
+
+        font-size:18px;
+
+    }
+
+    #result{
+
+        font-size:30px;
+
+    }
+
+    .btn{
+
+        height:58px;
+
+        font-size:20px;
+
+    }
+
+}
+
+/*==========================================
+            BUTTON CLICK
+==========================================*/
+
+.btn:active{
+
+    transform:scale(.96);
+
+}
